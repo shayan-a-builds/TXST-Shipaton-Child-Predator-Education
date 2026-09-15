@@ -43,12 +43,7 @@ fun DecisionScreen(
                 .padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = "Screen 4: Decision",
-                color = Color(0xFF9E9E9E),
-                fontSize = 13.sp,
-                modifier = Modifier.padding(top = 8.dp)
-            )
+
 
             Column(
                 modifier = Modifier.weight(1f),
