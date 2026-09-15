@@ -4,7 +4,7 @@
 
 Social Sentry is a small Android app built to teach kids and teens how to recognize online grooming before it goes too far. Instead of just reading a warning, the user walks through a realistic chat with a stranger online. It starts friendly, then slowly escalates into a request for a photo. At the key moment, the user has to make a choice: go along with it, or block and report. Picking wrong shows exactly why that choice was dangerous and lets them try again. Picking right shows why it worked.
 
-This was built in one night for a hackathon by a small team, each person owning a piece: one dev built the intro and chat screens, another built the decision and outcome screens, and the logic connecting all six screens together into one working app was handled separately. Everything is hardcoded on purpose. No backend, no login, no database. The goal was a working, testable demo, not a production app.
+This was built in one day for a hackathon by a small team, each person owning a piece: one dev built the intro and chat screens, another built the decision and outcome screens, and the logic connecting all six screens together into one working app was handled separately. Everything is hardcoded on purpose. No backend, no login, no database. The goal was a working, testable demo, not a production app.
 
 ## Try It On Your Phone (Easiest Way)
 
