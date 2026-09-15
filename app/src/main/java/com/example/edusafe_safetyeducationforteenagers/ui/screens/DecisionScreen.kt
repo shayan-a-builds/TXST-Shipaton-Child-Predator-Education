@@ -43,8 +43,6 @@ fun DecisionScreen(
                 .padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-
-
             Column(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.Center,
