@@ -33,4 +33,4 @@ If you want to open the actual project and run it from source:
 
 ## Demo Video
 
-A recorded demo of the app running through the full simulation is also included in this repo, so you can see exactly how it works without installing anything yourself.
+A recorded demo namely as "Social_Sentry-Demo_Video" of the app running through the full simulation is also included in this repo, so you can see exactly how it works without installing anything yourself.
