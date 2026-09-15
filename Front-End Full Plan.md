@@ -1,6 +1,28 @@
 
 # Developer 1 Assignment: Opening and Chat Screens
 
+IMPORTANT SHARED RULES
+
+1. Read docs/SCREEN_CONTRACT.md before coding.
+
+2. Inspect docs/TXST_SHIPATHON_APP_UI.png for the visual design.
+
+3. Use the existing package name and existing UI system.
+
+4. Modify only the files assigned to this developer.
+
+5. Do not modify MainActivity.kt unless you are Developer 2.
+
+6. Do not modify SocialSentryApp.kt unless you are Developer 2.
+
+7. Do not modify Gradle, SDK, Kotlin, plugin, or dependency versions.
+
+8. Do not create files owned by another developer.
+
+9. If another developer's file needs a change, report it to the product manager.
+
+10. Keep everything hardcoded and local for the MVP.
+
 ## Project
 
 Social Sentry Android Hackathon App
