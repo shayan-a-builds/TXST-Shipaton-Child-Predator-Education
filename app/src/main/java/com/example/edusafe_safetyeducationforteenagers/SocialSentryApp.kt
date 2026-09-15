@@ -14,15 +14,16 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.edusafe_safetyeducationforteenagers.ui.screens.DecisionScreen
+import com.example.edusafe_safetyeducationforteenagers.ui.screens.RetryScreen
+import com.example.edusafe_safetyeducationforteenagers.ui.screens.SuccessScreen
 
 /**
  * Controls navigation between the six simulation screens.
  *
- * Replace the Temporary*Screen composables below with the real screens from
- * Developer 1 (Briefing, Icebreaker, Escalation) and Developer 3 (Decision,
- * Success, Retry) once their branches are merged. The callback names already
- * match Screen-Contract.md, so integration should only require swapping
- * which composable is called in each branch of the `when`.
+ * Decision, Success, and Retry now use Developer 3's real screens. Briefing,
+ * Icebreaker, and Escalation still use temporary placeholders until
+ * Developer 1 delivers those screens; swap them the same way once available.
  */
 @Composable
 fun SocialSentryApp() {
@@ -48,20 +49,20 @@ fun SocialSentryApp() {
         }
 
         "decision" -> {
-            TemporaryDecisionScreen(
+            DecisionScreen(
                 onSafeChoice = { currentScreen = "success" },
                 onUnsafeChoice = { currentScreen = "retry" }
             )
         }
 
         "success" -> {
-            TemporarySuccessScreen(
+            SuccessScreen(
                 onRestart = { currentScreen = "briefing" }
             )
         }
 
         "retry" -> {
-            TemporaryRetryScreen(
+            RetryScreen(
                 onRetry = { currentScreen = "decision" }
             )
         }
@@ -122,60 +123,3 @@ fun TemporaryEscalationScreen(
     }
 }
 
-@Composable
-fun TemporaryDecisionScreen(
-    onSafeChoice: () -> Unit,
-    onUnsafeChoice: () -> Unit
-) {
-    Scaffold { innerPadding ->
-        Column(
-            modifier = Modifier.fillMaxSize().padding(innerPadding).padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            Text("What do you do?")
-            Button(onClick = onUnsafeChoice) {
-                Text("Okay sure, just one sec")
-            }
-            Button(onClick = onSafeChoice) {
-                Text("Block and report")
-            }
-        }
-    }
-}
-
-@Composable
-fun TemporarySuccessScreen(
-    onRestart: () -> Unit
-) {
-    Scaffold { innerPadding ->
-        Column(
-            modifier = Modifier.fillMaxSize().padding(innerPadding).padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            Text("Success Screen (placeholder)")
-            Text("You made the safe choice.")
-            Text("+100 XP · Advanced guardian")
-            Button(onClick = onRestart) {
-                Text("Restart")
-            }
-        }
-    }
-}
-
-@Composable
-fun TemporaryRetryScreen(
-    onRetry: () -> Unit
-) {
-    Scaffold { innerPadding ->
-        Column(
-            modifier = Modifier.fillMaxSize().padding(innerPadding).padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            Text("Try Again Screen (placeholder)")
-            Text("That wasn't the safe choice. Let's try again.")
-            Button(onClick = onRetry) {
-                Text("Retry Simulation")
-            }
-        }
-    }
-}
